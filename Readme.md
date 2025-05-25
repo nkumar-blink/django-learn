@@ -20,6 +20,20 @@
 - create superuser: `python manage.py createsuperuser`
 - make migrations: ` python manage.py makemigrations`
 - list query ran during migration : `python manage.py sqlmigrate modelName migration eg : sqlmigrate store 0001`
+- reverting migrations: 
+```
+python manage.py migrate store 0002
+
+Operations to perform:
+  Target specific migration: 0002_alter_product_table, from store
+Running migrations:
+  Rendering model states... DONE
+  Unapplying store.0003_customer_store_custo_first_n_8f83e0_idx_and_more... OK
+(.venv) .venvn.kumar@N-KUMAR-M01 django-2 % 
+
+- then delete the code change
+- then delete the migration file as well
+```
 
 ## Django concepts
 - Dynamic url 
