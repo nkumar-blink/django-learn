@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>this is setting up template</h2>
+    {% if name %}
+    <h2>this is setting up template for user {{name}}</h2>
+    {% else %}
+    <h1>hello world</h1>
+    {% endif %}
 </body>
 </html>
