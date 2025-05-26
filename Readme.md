@@ -50,3 +50,18 @@ urlpatterns = [
 - queryset (variable that holds response) = ModelName.objects.all() 
 - .object : Model Object Attribute
 - .all() : Method(.get(), .filter(), .exclude())
+- running custom sql query
+```
+ - creates empty migration file : python manage.py makemigrations store --empty
+ - then specify sql query one for doing and one for reversal
+
+    operations = [
+        migrations.RunSQL(
+    """
+    INSERT INTO store_collection(title) VALUES ('collection1')
+    """, """
+    DELETE FROM store_collection WHERE title='collection1'
+    """
+        )
+    ]
+```
