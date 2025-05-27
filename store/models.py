@@ -13,7 +13,7 @@ class Product(models.Model):
     inventory = models.IntegerField()
     last_update = models.DateTimeField(auto_now=True)
     collection = models.ForeignKey('Collection', on_delete=models.PROTECT) #collection class is crreated below so referencing it here
-    promotions = models.ManyToManyField('Promotion') 
+    #promotions = models.ManyToManyField('Promotion', null=True) 
         
 class Customer(models.Model):
     MEMBERSHIP_BRONZE = 'B'

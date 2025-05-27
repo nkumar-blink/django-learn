@@ -11,5 +11,8 @@
     {% else %}
     <h1>hello world</h1>
     {% endif %}
+    {% for p in product %}
+    <h3>Product Title: {{p.title}}</h3>
+    {%endfor%}
 </body>
 </html>

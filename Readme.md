@@ -65,3 +65,5 @@ urlpatterns = [
         )
     ]
 ```
+
+- QuerySets are lazy gets evaluated at a later point of time advanatge here is we can use it to do complex query.
